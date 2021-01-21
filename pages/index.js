@@ -11,7 +11,7 @@ export const getStaticProps = async context => {
   const { users, message } = await getAllUsers()
 
   return {
-    // revalidate: 10,
+    revalidate: 10,
     props: {
       users,
       message

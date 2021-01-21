@@ -11,7 +11,8 @@ const Alert = ({ data }) => {
     if (alertRef.current) {
       Object.assign(alertRef.current.style, { opacity: '1' })
       setTimeout(() => {
-        Object.assign(alertRef.current.style, { opacity: '0' })
+        if (alertRef.current)
+          Object.assign(alertRef.current.style, { opacity: '0' })
       }, 3000)
     }
   }, [data])
